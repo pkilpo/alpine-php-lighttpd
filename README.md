@@ -1,5 +1,8 @@
 #alpine-php-lighttpd
 
+NOTE:
+- Still in test phase!
+
 Why another Alpine PHP repository?
 - I tried several and some of them outdated, some of them did not work on arm64 (Raspberry Pi5)
 - I run two Wordpress blogs and had to add necessary PHP modules
@@ -10,8 +13,13 @@ Why not fork then?
 - Would have changed too much on base repositories
 - See credits
 
-  # If you want to test for php uncomment this, do not leave this file in production
-  #echo "<?php echo phpinfo(); ?>" > /var/www/your site/htdocs/info.php
+Uses docker volumes for access log and site www
+
+If you want to test for php run this in your docker volume:
+Inside running container:
+  echo "<?php echo phpinfo(); ?>" > /var/www/<your_site>/htdocs/info.php
+In host machine:
+  echo sudo "<?php echo phpinfo(); ?>" > /var/lib/docker/volumes/<your_volume>/_data
 
 Lighttpd and PHP running on latest Alpine Docker image.
 
