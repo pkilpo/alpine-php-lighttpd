@@ -17,10 +17,13 @@ Uses docker volumes for access log and site www
 
 If you want to test for php run this in your docker volume:
 Inside running container:
+```bash
   echo "<?php echo phpinfo(); ?>" > /var/www/<your_site>/htdocs/info.php
+```
 In host machine:
-  echo sudo "<?php echo phpinfo(); ?>" > /var/lib/docker/volumes/<your_volume>/_data
-
+```bash
+  sudo echo "<?php echo phpinfo(); ?>" > /var/lib/docker/volumes/<your_volume>/_data
+```
 Lighttpd and PHP running on latest Alpine Docker image.
 
 Build using;
