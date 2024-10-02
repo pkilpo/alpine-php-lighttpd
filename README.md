@@ -41,6 +41,8 @@ docker run --name "my-php-lighttpd" --rm -p 8080:80 -v $(pwd):/var/www pkilpo/al
 Works for static & PHP web content.
 
 Credits:
+
 Thank you for your work which helped me a lot in this project:
+- https://wiki.alpinelinux.org/wiki/Production_LAMP_system:_Lighttpd_%2B_PHP_%2B_MySQL
 - m4rcu5nl/docker-lighttpd-alpine
 - alastairhm/alpine-lighttpd-php
